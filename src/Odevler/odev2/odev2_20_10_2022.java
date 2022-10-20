@@ -1,4 +1,4 @@
-package Odev;
+package Odevler.odev2;
 
 import Utility.MyFunc;
 import org.openqa.selenium.By;

@@ -23,6 +23,8 @@ public class _03_FindingByIdNotFoundException {
             System.out.println("Eleman bulunamadı = "+ ex.getMessage());
         }
 
+
+
         MyFunc.Bekle(8);
         driver.quit();
 
