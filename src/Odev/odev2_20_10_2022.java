@@ -27,12 +27,14 @@ public class odev2_20_10_2022 {
 
         WebElement label=driver.findElement(By.id("userName-label"));
         System.out.println("label.getText() = " + label.getText());
-        
+
         WebElement label2=driver.findElement(By.id("userEmail-label"));
         System.out.println("label2.getText() = " + label2.getText());
 
         MyFunc.Bekle(10);
         driver.quit();
+
+        //sSs
 
 
     }
