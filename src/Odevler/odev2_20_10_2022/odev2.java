@@ -1,4 +1,4 @@
-package Odevler.odev2;
+package Odevler.odev2_20_10_2022;
 
 import Utility.MyFunc;
 import org.openqa.selenium.By;
@@ -6,9 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class odev2_20_10_2022_2 {
+public class odev2 {
     public static void main(String[] args) {
-
 
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
@@ -23,9 +22,7 @@ public class odev2_20_10_2022_2 {
         WebElement sigin=driver.findElement(By.id("log-in"));
         sigin.click();
 
-
-
-        MyFunc.Bekle(10);
+        MyFunc.Bekle(5);
         driver.quit();
 
 
