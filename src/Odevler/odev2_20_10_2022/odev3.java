@@ -30,6 +30,11 @@ public class odev3 {
         WebElement searc=driver.findElement(By.className("searchTextSpan"));
         searc.click();
 
+        /*WebElement nnn=driver.findElement(By.className("nnn"));
+        System.out.println("nnn.getText() = " + nnn.getText());
+
+         */
+
         MyFunc.Bekle(5);
         driver.quit();
 
