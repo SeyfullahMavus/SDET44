@@ -7,6 +7,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
+/*
+4-
+
+Bu websitesine gidiniz.  [https://testpages.herokuapp.com/styled/index.html]
+
+Calculate'e tıklayınız.
+
+         İlk input'a herhangi bir sayı giriniz.
+
+         İkinci input'a herhangi bir sayı giriniz.
+
+Calculate button'una tıklayınız.
+
+Sonucu alınız.
+
+Sonucu yazdırınız.
+ */
+
 public class odev4 {
     public static void main(String[] args) {
 
