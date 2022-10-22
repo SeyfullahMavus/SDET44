@@ -28,13 +28,16 @@ public class odev1 {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Submit);
         Submit.click();
 
-        if (driver.getPageSource().contains("Automation")) {
+        WebElement namee=driver.findElement(By.id("userEmail-label"));
+        WebElement emaill=driver.findElement(By.id("userEmail-label"));
+
+        if (namee.getText().contains("Automation")) {
             System.out.println("Automation = Var");
         } else {
             System.out.println("Automation = Yok");
         }
 
-        if (driver.getPageSource().contains("Testing")) {
+        if (emaill.getText().contains("Testing")) {
             System.out.println("Testing = Var");
         } else {
             System.out.println("Testing = Yok");
