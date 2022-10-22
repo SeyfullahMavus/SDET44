@@ -35,8 +35,12 @@ public class odev2 {
         WebElement sigin=driver.findElement(By.id("log-in"));
         sigin.click();
 
-        MyFunc.Bekle(5);
+        WebElement time=driver.findElement(By.id("time"));
+        System.out.println("time.getText() = " + time.getText());
+
+       MyFunc.Bekle(5);
         driver.quit();
+
 
 
     }
