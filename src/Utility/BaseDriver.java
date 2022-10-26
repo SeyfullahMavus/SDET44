@@ -15,15 +15,19 @@ public class BaseDriver {
     static {
         //ilk adımda çalışan kod kısmı expentd yapınca
 
+        KalanOncekileriKapat();
+
         Logger logger=Logger.getLogger("");//sisteme ait bütün logları üreten objeye/servise ulaştım ""
         logger.setLevel(Level.SEVERE);//sadece errorları göster
 
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");// ChromeServici sessiz modda çalıştı
+        // çıkan kırmızı hata kodları benzerlerini silme
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         driver = new ChromeDriver(); // web sayfasını kontrol eden görevli
 
         driver.manage().window().maximize();// ekranı max yapıyor.
         driver.manage().deleteAllCookies();// sitenin senin bilgisayarında yaptığı ayarları siliyor, sayfa başlangıç ayarlarına dönüyor
+        //ilk defa siteye giriyon gibi oluyo
 
 
         Duration dr = Duration.ofSeconds(30);
@@ -36,8 +40,17 @@ public class BaseDriver {
 
     }
 
+    public static void KalanOncekileriKapat() {
+
+        try {
+            Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
+        } catch (Exception ignored) {
+
+        }
+    }
+
     public static void driverBekleKapat() {
-        MyFunc.Bekle(10);
+        MyFunc.Bekle(5);
         driver.quit();
 
     }
