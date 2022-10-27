@@ -25,28 +25,44 @@ public class _02_SenaryoXPath extends BaseDriver {
         driver.get("https://www.saucedemo.com/");
 
         WebElement username=driver.findElement(By.xpath("//*[@placeholder='Username']"));
-        username.sendKeys("problem_user");
+        username.sendKeys("standard_user");
+
+        MyFunc.Bekle(1);
 
         WebElement password=driver.findElement(By.xpath("//*[@placeholder='Password']"));
         password.sendKeys("secret_sauce");
 
+        MyFunc.Bekle(1);
+
         WebElement login=driver.findElement(By.xpath("//*[@type='submit']"));
         login.click();
+
+        MyFunc.Bekle(1);
 
         WebElement sauce1=driver.findElement(By.xpath("//div[contains(text(),'Sauce Labs Backpack')]"));
         sauce1.click();
 
+        MyFunc.Bekle(1);
+
         WebElement sepet1=driver.findElement(By.xpath("//button[contains(text(),'Add to cart')]"));
         sepet1.click();
+
+        MyFunc.Bekle(1);
 
         WebElement geri=driver.findElement(By.xpath("//*[@data-test='back-to-products']"));
         geri.click();
 
-        WebElement sauce2=driver.findElement(By.xpath("//*[@id='item_1_title_link']"));
+        MyFunc.Bekle(1);
+
+        WebElement sauce2=driver.findElement(By.xpath("//*[@data-test='add-to-cart-sauce-labs-bolt-t-shirt']"));
         sauce2.click();
+
+        MyFunc.Bekle(1);
 
         WebElement sepet2=driver.findElement(By.xpath("//*[@class='shopping_cart_link']"));
         sepet2.click();
+
+        MyFunc.Bekle(1);
 
         WebElement check=driver.findElement(By.xpath("//*[@data-test='checkout']"));
         check.click();
