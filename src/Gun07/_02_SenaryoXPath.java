@@ -2,9 +2,12 @@ package Gun07;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class _02_SenaryoXPath extends BaseDriver {
 
@@ -73,19 +76,43 @@ public class _02_SenaryoXPath extends BaseDriver {
         check.click();
 
         MyFunc.Bekle(1);
+
         WebElement name=driver.findElement(By.xpath("//*[@placeholder='First Name'][@data-test='firstName']"));
         name.sendKeys("Seyf");
 
         MyFunc.Bekle(1);
+
         WebElement surName=driver.findElement(By.xpath("//*[@placeholder='Last Name'][@data-test='lastName']"));
         surName.sendKeys("Mavus");
 
         MyFunc.Bekle(1);
+
         WebElement zipCode=driver.findElement(By.xpath("//*[@placeholder='Zip/Postal Code']"));
         zipCode.sendKeys("44110");
 
+        MyFunc.Bekle(1);
+
         WebElement contine=driver.findElement(By.xpath("//*[@data-test='continue']"));
         contine.click();
+
+        //ürün ücretleri
+
+        List<WebElement> ucretler=driver.findElements(By.xpath("//div[@class='inventory_item_price']"));
+
+        double toplam=0;
+        for (WebElement e: ucretler)
+        {
+            //System.out.println(e.getText());
+            toplam +=Double.parseDouble(e.getText().substring(1));
+        }
+        System.out.println("toplam = " + toplam);
+
+        WebElement webAltToplam=driver.findElement(By.xpath("//div[@class='summary_subtotal_label']"));
+        //System.out.println("webAltToplam = " + webAltToplam);
+        double altToplam=Double.parseDouble(webAltToplam.getText().substring(13));
+        System.out.println("altToplam = " + altToplam);
+
+        Assert.assertTrue("Değerler eşit değil",(toplam==altToplam));
 
 
         driverBekleKapat();
