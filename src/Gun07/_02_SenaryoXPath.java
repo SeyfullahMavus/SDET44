@@ -54,12 +54,17 @@ public class _02_SenaryoXPath extends BaseDriver {
 
         MyFunc.Bekle(1);
 
-        WebElement sauce2=driver.findElement(By.xpath("//*[@data-test='add-to-cart-sauce-labs-bolt-t-shirt']"));
+        WebElement sauce2=driver.findElement(By.xpath("//div[text()='Sauce Labs Bolt T-Shirt']"));
         sauce2.click();
 
         MyFunc.Bekle(1);
 
-        WebElement sepet2=driver.findElement(By.xpath("//*[@class='shopping_cart_link']"));
+        WebElement addcart=driver.findElement(By.xpath("//button[text()='Add to cart']"));
+        addcart.click();
+
+        MyFunc.Bekle(1);
+
+        WebElement sepet2=driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
         sepet2.click();
 
         MyFunc.Bekle(1);
@@ -69,11 +74,11 @@ public class _02_SenaryoXPath extends BaseDriver {
 
         MyFunc.Bekle(1);
         WebElement name=driver.findElement(By.xpath("//*[@placeholder='First Name'][@data-test='firstName']"));
-        name.sendKeys("s");
+        name.sendKeys("Seyf");
 
         MyFunc.Bekle(1);
         WebElement surName=driver.findElement(By.xpath("//*[@placeholder='Last Name'][@data-test='lastName']"));
-        surName.sendKeys("m");
+        surName.sendKeys("Mavus");
 
         MyFunc.Bekle(1);
         WebElement zipCode=driver.findElement(By.xpath("//*[@placeholder='Zip/Postal Code']"));
