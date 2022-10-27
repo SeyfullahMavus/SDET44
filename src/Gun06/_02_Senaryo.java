@@ -27,7 +27,7 @@ public class _02_Senaryo extends BaseDriver {
         usin.click();
         WebElement using = driver.findElement(By.cssSelector("#u_SSt_4597 > :nth-child(4)"));
         using.click();
-        good.click();
+        good.click();// sadece son açılan dropdown kapansın diye herhangi bir yere tıklattık
 
         driverBekleKapat();
 
