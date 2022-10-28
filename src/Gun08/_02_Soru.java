@@ -43,30 +43,38 @@ public class _02_Soru extends BaseDriver {
         email.sendKeys("seyfullahmavus@hotmail.com");
         MyFunc.Bekle(1);
 
+        WebElement email2=driver.findElement(By.xpath("//*[@aria-label='E-posta adresini tekrar gir']"));
+        email2.sendKeys("seyfullahmavus@hotmail.com");
+        MyFunc.Bekle(1);
+
         WebElement dogumGunu=driver.findElement(By.id("day"));
 
         Select gun=new Select(dogumGunu);
         gun.selectByVisibleText("6");
+        MyFunc.Bekle(1);
 
         WebElement dogumayi=driver.findElement(By.id("month"));
 
         Select ay=new Select(dogumayi);
         ay.selectByVisibleText("Mar");
+        MyFunc.Bekle(1);
 
         WebElement dogumyili=driver.findElement(By.id("year"));
 
         Select yil=new Select(dogumyili);
         yil.selectByVisibleText("1990");
+        MyFunc.Bekle(1);
 
         WebElement cinsiyet=driver.findElement(By.xpath("//*[@class='_8esa'][@value='2']"));
         cinsiyet.click();
 
+        Assert.assertFalse(email2.getText().contains("adresini tekrar gir"));
 
         driverBekleKapat();
 
 
 
-        //Assert.assertTrue();
+
 
 
 

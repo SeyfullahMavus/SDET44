@@ -1,5 +1,6 @@
 package Utility;
 
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -25,6 +26,7 @@ public class BaseDriver {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         driver = new ChromeDriver(); // web sayfasını kontrol eden görevli
 
+       // driver.manage().window().setPosition(new Point(2000,0)); // açılan tarayıcıyı 2. ekrana taşıyor
         driver.manage().window().maximize();// ekranı max yapıyor.
         driver.manage().deleteAllCookies();// sitenin senin bilgisayarında yaptığı ayarları siliyor, sayfa başlangıç ayarlarına dönüyor
         //ilk defa siteye giriyon gibi oluyo
@@ -43,14 +45,14 @@ public class BaseDriver {
     public static void KalanOncekileriKapat() {
 
         try {
-            Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
+            Runtime.getRuntime().exec("taskkill /F /IM chromedriver /T");
         } catch (Exception ignored) {
 
         }
     }
 
     public static void driverBekleKapat() {
-        MyFunc.Bekle(5);
+        MyFunc.Bekle(2);
         driver.quit();
 
     }
