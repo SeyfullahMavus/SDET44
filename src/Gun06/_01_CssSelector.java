@@ -22,7 +22,7 @@ public class _01_CssSelector extends BaseDriver {
         //    System.out.println("test passed");
         // } else {
         //     System.out.println("test failed");
-        // }
+        // }//TODO
         Assert.assertTrue("Mesaj bulunamadı",msg.getText().contains("merhaba selenium"));
         // assertTrue: içindeki değer True mu ? True ise hiç bir şey yapmaz.mesaj vermez
         // değilse beklenen olmamışsa hata mesajı verir.

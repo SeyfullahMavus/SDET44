@@ -1,4 +1,4 @@
-package Odevler.ss;
+package Odevler.Projeler.proje1;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;

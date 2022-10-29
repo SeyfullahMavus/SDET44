@@ -1,17 +1,16 @@
-package Odevler.ss;
+package Odevler.Projeler.proje1;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
 import org.junit.*;
-import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import static Odevler.ss.giris.giriss;
+import static Odevler.Projeler.proje1.giris.giriss;
 
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class proje extends BaseDriver {
 
@@ -124,6 +123,8 @@ public class proje extends BaseDriver {
 
     @Test
     public void Test3() {
+
+        MyFunc.Bekle(1);
         giriss();
 
         MyFunc.Bekle(1);
@@ -140,6 +141,7 @@ public class proje extends BaseDriver {
     @Test
     public void Test4()
     {
+        MyFunc.Bekle(1);
         giriss();
 
         MyFunc.Bekle(1);
@@ -156,6 +158,7 @@ public class proje extends BaseDriver {
     @Test
     public void Test5()
     {
+        MyFunc.Bekle(1);
         giriss();
 
         MyFunc.Bekle(1);
