@@ -32,7 +32,7 @@ public class BaseDriver {
         //ilk defa siteye giriyon gibi oluyo
 
 
-        Duration dr = Duration.ofSeconds(30);
+        Duration dr = Duration.ofSeconds(5);
         driver.manage().timeouts().pageLoadTimeout(dr);// sadece tüm sayfanın kodlarının bilgisayarınıza inme süresiyle ilgili
         // bu eklenmezse selenium sayfa yüklenene kadar(sonsuza) bekler. : 30 sn süresince sayfanın yüklenmesini bekle yüklenmezse hata ver
         //eğer 2 sn yüklerse 30 sn. beklemez.
